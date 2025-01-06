@@ -109,16 +109,14 @@ services:
       - ./database/evolution/redis:/data
     networks: 
       - evolution-network
-  
+
   evolution:
-    image: atendai/evolution-api:v2.1.0
+    image: atendai/evolution-api:v2.2.0
     container_name: evolution-api
     restart: always
     depends_on:
       - postgres-evolution
       - redis-evolution
-      - rails
-      - sidekiq
     volumes:
       - ./evolution-api/evolution_instances:/evolution/instances
     networks:
