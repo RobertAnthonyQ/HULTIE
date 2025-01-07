@@ -1,0 +1,3 @@
+from .config import SEDES_CONFIG, UNIVERSITIES, STICKERS
+
+__all__ = ['SEDES_CONFIG', 'UNIVERSITIES', 'STICKERS']
